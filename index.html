@@ -163,6 +163,197 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-630-markdown-note" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/22/630-markdown-note/">第一篇用Markdown来写的记录</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/22/630-markdown-note/" class="archive-article-date">
+  	<time datetime="2019-07-22T08:32:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>今天看完了张哥的Github入门系列文章，看完之后觉得现在可能还用不上，但是开头发现的Markdown工具，说到这个工具优点很多，觉得可以用这个来学着写写记录。选择的 win10 Markdown 编辑器是 Markdown Pad2 。</p>
+</blockquote>
+<p>##1.WIN10环境安装MarkdownPad2及相关配置</p>
+<ol>
+<li>MarkdownPad2下载：<a href="http://markdownpad.com/download.html" target="_blank" rel="noopener">下载链接</a></li>
+<li>插件 Awesomium 1.6.6 SDK下载: <a href="http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe" target="_blank" rel="noopener">Awesomium 1.6.6 SDK</a></li>
+<li>如果有是英文可以通过 Tools &gt; Editor &gt; Language 修改</li>
+<li>帮助中可激活专业版</li>
+</ol>
+<p>##2.Markdown相关语法</p>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p><code>#</code>+ 标题 可输出多级标题</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#一级标题</span><br><span class="line">##二级标题</span><br><span class="line">###三级标题</span><br><span class="line">####四级标题</span><br><span class="line">#####五级标题</span><br><span class="line">######六级标题</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p>#一级标题</p>
+<p>##二级标题</p>
+<p>###三级标题</p>
+<p>####四级标题</p>
+<p>#####五级标题</p>
+<p>######六级标题</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>有序列表：<code>1.</code> + 名称<br>无序列表：<code>-</code> + 名称</p>
+<p>例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><p>输入<code>***</code>出现分割线</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">内容1</span><br><span class="line">***</span><br><span class="line">内容2</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p>内容1</p>
+<hr>
+<p>内容2</p>
+<hr>
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p><code>*内容*</code> 出现斜体文字<br><code>**内容**</code> 出现加粗文字</p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是 *斜体* 文字，这是 **加粗** 文字</span><br></pre></td></tr></table></figure>
+
+<p>结果：<br>这是 <em>斜体</em> 文字，这是 <strong>加粗</strong> 文字</p>
+<h3 id="插入链接或图片"><a href="#插入链接或图片" class="headerlink" title="插入链接或图片"></a>插入链接或图片</h3><p><code>[网站](网址)</code> 插入链接<br><code>!(图片下方文字)[图片链接]</code> 插入图片</p>
+<p>例如：        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[豆瓣](https://www.douban.com/)</span><br><span class="line">![图片](630-markdown-note/0.jpg）</span><br></pre></td></tr></table></figure>
+
+<p>结果：<br><a href="https://www.douban.com/" target="_blank" rel="noopener">豆瓣</a><br><img src="630-markdown-note/0.jpg" alt="图片"></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code>一行代码 代码前后 + 反引号 ` 
+一块代码 代码前后 + 三个反引号 `</code></pre><p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`hello world！`</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">	int dogs;</span><br><span class="line">		</span><br><span class="line">	printf(&quot;How many dogs do you have?\n&quot;);</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;dogs);</span><br><span class="line">	printf(&quot;So you have %d dog(s)!\n&quot;,dogs);</span><br><span class="line">		</span><br><span class="line">	return 0;</span><br><span class="line"> &#125; </span><br><span class="line">```	</span><br><span class="line">结果：</span><br><span class="line">`hello world！`</span><br></pre></td></tr></table></figure>
+
+<p>#include&lt;stdio.h&gt;<br>int main(void)<br>{<br>    int dogs;</p>
+<pre><code>printf(&quot;How many dogs do you have?\n&quot;);
+scanf(&quot;%d&quot;,&amp;dogs);
+printf(&quot;So you have %d dog(s)!\n&quot;,dogs);
+
+return 0;</code></pre><p> } </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">###	表格</span><br><span class="line"></span><br><span class="line">```	</span><br><span class="line">号数|项目1|项目2</span><br><span class="line">:----:|:----:|:----:</span><br><span class="line">第一号|内容1|内容2</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">号数</th>
+<th align="center">项目1</th>
+<th align="center">项目2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">第一号</td>
+<td align="center">内容1</td>
+<td align="center">内容2</td>
+</tr>
+<tr>
+<td align="center"><code>:</code> 在 <code>-</code> 左 内容向左对齐， <code>-</code> 左右都有 <code>：</code>则内容居中, <code>：</code> 在 <code>-</code> 右 内容向右对齐.</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">###    引用</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>&gt;</code> 后加内容</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;难得夜这样的深，难得炉火这般的温，难得无言的相对，一对寂寞的灵魂。</span><br><span class="line"></span><br><span class="line">&gt;难得夜这样的深，</span><br><span class="line">&gt;难得炉火这般的温，</span><br><span class="line">&gt;难得无言的相对，</span><br><span class="line">&gt;一对寂寞的灵魂。</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<blockquote>
+<p>难得夜这样的深，难得炉火这般的温，难得无言的相对，一对寂寞的灵魂。</p>
+</blockquote>
+<blockquote>
+<p>难得夜这样的深，<br>难得炉火这般的温，<br>难得无言的相对，<br>一对寂寞的灵魂。</p>
+</blockquote>
+<p>###一些注意事项</p>
+<ol>
+<li>输入相应的标识符号时要将输入法改成<strong>英文</strong>。</li>
+<li>反引号在键盘 tab 键上方。</li>
+<li>中文与数字、英文间最好加上一个<strong>空格</strong>。</li>
+<li>列表每一项中如果有多个小段，在开头 <code>1.</code> 或 <code>-</code> 与文字之间要加 4 个空格。</li>
+<li>不同的地方可能会有不同的 CSS 样式，注意作出不同的修改。</li>
+<li>多多使用哈哈哈。</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/22/630-markdown-note/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-721 first blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -336,6 +527,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
