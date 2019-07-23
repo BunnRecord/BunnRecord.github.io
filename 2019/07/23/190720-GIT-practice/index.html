@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://bunnrecord.github.io">
-  <title>第一篇用Markdown来写的记录 | BunnRecord</title>
+  <title>GIT 实战 | BunnRecord</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
   <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
@@ -23,20 +23,54 @@
         border-left-color: #6d6d6d;    /*左边框颜色*/
     }
   </style>
-  <meta name="description" content="今天看完了张哥的Github入门系列文章，看完之后觉得现在可能还用不上，但是开头发现的Markdown工具，说到这个工具优点很多，觉得可以用这个来学着写写记录。选择的 win10 Markdown 编辑器是 Markdown Pad2 。  1.WIN10环境安装MarkdownPad2及相关配置 MarkdownPad2下载：下载链接 插件 Awesomium 1.6.6 SDK下载: Awe">
-<meta name="keywords" content="markdown">
+  <meta name="description" content="这篇试用一下之前学到的 GIT 命令  提交及版本回退部分首先创建一个空的文件夹 并初始化 GIT 仓库">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇用Markdown来写的记录">
-<meta property="og:url" content="https://bunnrecord.github.io/2019/07/22/190630-markdown-note/index.html">
+<meta property="og:title" content="GIT 实战">
+<meta property="og:url" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/index.html">
 <meta property="og:site_name" content="BunnRecord">
-<meta property="og:description" content="今天看完了张哥的Github入门系列文章，看完之后觉得现在可能还用不上，但是开头发现的Markdown工具，说到这个工具优点很多，觉得可以用这个来学着写写记录。选择的 win10 Markdown 编辑器是 Markdown Pad2 。  1.WIN10环境安装MarkdownPad2及相关配置 MarkdownPad2下载：下载链接 插件 Awesomium 1.6.6 SDK下载: Awe">
+<meta property="og:description" content="这篇试用一下之前学到的 GIT 命令  提交及版本回退部分首先创建一个空的文件夹 并初始化 GIT 仓库">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://bunnrecord.github.io/2019/07/22/190630-markdown-note/0.jpg">
-<meta property="og:updated_time" content="2019-07-22T09:19:30.522Z">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/1.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/2.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/3.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/4.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/5.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/6.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/7.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/8.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/9.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/10.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/11.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/12.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/13.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/14.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/15.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/16.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/17.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/18.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/19.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/20.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/21.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/22.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/23.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/24.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/25.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/26.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/27.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/28.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/29.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/30.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/31.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/32.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/33.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/34.png">
+<meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/35.png">
+<meta property="og:updated_time" content="2019-07-23T05:31:01.982Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一篇用Markdown来写的记录">
-<meta name="twitter:description" content="今天看完了张哥的Github入门系列文章，看完之后觉得现在可能还用不上，但是开头发现的Markdown工具，说到这个工具优点很多，觉得可以用这个来学着写写记录。选择的 win10 Markdown 编辑器是 Markdown Pad2 。  1.WIN10环境安装MarkdownPad2及相关配置 MarkdownPad2下载：下载链接 插件 Awesomium 1.6.6 SDK下载: Awe">
-<meta name="twitter:image" content="https://bunnrecord.github.io/2019/07/22/190630-markdown-note/0.jpg">
+<meta name="twitter:title" content="GIT 实战">
+<meta name="twitter:description" content="这篇试用一下之前学到的 GIT 命令  提交及版本回退部分首先创建一个空的文件夹 并初始化 GIT 仓库">
+<meta name="twitter:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/1.png">
   
     <link rel="alternative" href="/atom.xml" title="BunnRecord" type="application/atom+xml">
   
@@ -168,20 +202,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-190630-markdown-note" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-190720-GIT-practice" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      第一篇用Markdown来写的记录
+      GIT 实战
     </h1>
   
 
         
-        <a href="/2019/07/22/190630-markdown-note/" class="archive-article-date">
-  	<time datetime="2019-07-22T08:32:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-22</time>
+        <a href="/2019/07/23/190720-GIT-practice/" class="archive-article-date">
+  	<time datetime="2019-07-23T05:01:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-23</time>
 </a>
         
       </header>
@@ -189,100 +223,54 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>今天看完了张哥的Github入门系列文章，看完之后觉得现在可能还用不上，但是开头发现的Markdown工具，说到这个工具优点很多，觉得可以用这个来学着写写记录。选择的 win10 Markdown 编辑器是 Markdown Pad2 。</p>
+<p>这篇试用一下之前学到的 GIT 命令</p>
 </blockquote>
-<h2 id="1-WIN10环境安装MarkdownPad2及相关配置"><a href="#1-WIN10环境安装MarkdownPad2及相关配置" class="headerlink" title="1.WIN10环境安装MarkdownPad2及相关配置"></a>1.WIN10环境安装MarkdownPad2及相关配置</h2><ol>
-<li>MarkdownPad2下载：<a href="http://markdownpad.com/download.html" target="_blank" rel="noopener">下载链接</a></li>
-<li>插件 Awesomium 1.6.6 SDK下载: <a href="http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe" target="_blank" rel="noopener">Awesomium 1.6.6 SDK</a></li>
-<li>如果有是英文可以通过 Tools &gt; Editor &gt; Language 修改</li>
-<li>帮助中可激活专业版</li>
-</ol>
-<h2 id="2-Markdown相关语法"><a href="#2-Markdown相关语法" class="headerlink" title="2.Markdown相关语法"></a>2.Markdown相关语法</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p><code>#</code>+ 标题 可输出多级标题</p>
+<h2 id="提交及版本回退部分"><a href="#提交及版本回退部分" class="headerlink" title="提交及版本回退部分"></a>提交及版本回退部分</h2><p>首先创建一个空的文件夹 并初始化 GIT 仓库<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/1.png" alt="首先创建一个空的文件夹 并初始化 GIT 仓库"></p>
 <a id="more"></a>
 
-<p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>有序列表：<code>1.</code> + 名称<br>无序列表：<code>-</code> + 名称</p>
-<p>例如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ol>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><p>输入<code>***</code>出现分割线</p>
-<p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">内容1</span><br><span class="line">***</span><br><span class="line">内容2</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<p>内容1</p>
+<p>创建一个纯文本文件<img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/2.png" alt="创建一个纯文本文件"></p>
+<p>将文件添加并提交到仓库（注意提交时附加的信息）<img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/3.png" alt="将文件添加并提交到仓库（注意提交时附加的信息）"></p>
+<p>修改一下纯文本文件<img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/4.png" alt="修改一下纯文本文件"></p>
+<p>用 status 命令查看状态 用 diff 命令查看修改的地方<img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/5.png" alt="用 status 命令查看状态 用 diff 命令查看修改的地方"><br>这里可以看到我们修改了文件但没有 add 和 commit ，所以 status 命令就告诉了我们，修改（changes）还没有添加（add）到缓存区（stage）和提交（commit）到仓库。<br>而 diff 命令就很直观地告诉了我们加了一句话（绿色字）。</p>
 <hr>
-<p>内容2</p>
+<p>再做一次添加并提交（注意提交时的信息）<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/6.png" alt="再做一次添加并提交（注意提交时的信息）"></p>
+<p>查看提交日志并尝试回到修改前的版本<img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/7.png" alt="查看提交日志并尝试回到修改前的版本"><br>这里试用GIT很重要的一个功能<strong>版本回退</strong>，试着用<code>git reset --hard HEAD^</code>这条命令去实现，但没有成功，查了下<a href="https://blog.csdn.net/qq_32623363/article/details/78968077" target="_blank" rel="noopener">原因</a>，原来是cmd控制台输入<code>^</code>就会遇到这个问题，换了条回退的命令，结果成功了。</p>
 <hr>
-<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p><code>*内容*</code> 出现斜体文字<br><code>**内容**</code> 出现加粗文字</p>
-<p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是 *斜体* 文字，这是 **加粗** 文字</span><br></pre></td></tr></table></figure>
-
-<p>结果：<br>这是 <em>斜体</em> 文字，这是 <strong>加粗</strong> 文字</p>
-<h3 id="插入链接或图片"><a href="#插入链接或图片" class="headerlink" title="插入链接或图片"></a>插入链接或图片</h3><p><code>[网站](网址)</code> 插入链接<br><code>!(图片下方文字)[图片链接]</code> 插入图片</p>
-<p>例如：        </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[豆瓣](https://www.douban.com/)</span><br><span class="line">![图片](630-markdown-note/0.jpg）</span><br></pre></td></tr></table></figure>
-
-<p>结果：<br><a href="https://www.douban.com/" target="_blank" rel="noopener">豆瓣</a><br><img src="//bunnrecord.github.io/2019/07/22/190630-markdown-note/0.jpg" alt="图片"></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code>一行代码 代码前后 + 反引号 ` 
-一块代码 代码前后 + 三个反引号 `</code></pre><p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`hello world！`</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">	int dogs;</span><br><span class="line">		</span><br><span class="line">	printf(&quot;How many dogs do you have?\n&quot;);</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;dogs);</span><br><span class="line">	printf(&quot;So you have %d dog(s)!\n&quot;,dogs);</span><br><span class="line">		</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>结果：<br><code>hello world！</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">	int dogs;</span><br><span class="line">		</span><br><span class="line">	printf(&quot;How many dogs do you have?\n&quot;);</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;dogs);</span><br><span class="line">	printf(&quot;So you have %d dog(s)!\n&quot;,dogs);</span><br><span class="line">		</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">号数|项目1|项目2</span><br><span class="line">:----:|:----:|:----:</span><br><span class="line">第一号|内容1|内容2</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="center">号数</th>
-<th align="center">项目1</th>
-<th align="center">项目2</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">第一号</td>
-<td align="center">内容1</td>
-<td align="center">内容2</td>
-</tr>
-</tbody></table>
-<p><code>:</code> 在 <code>-</code> 左 内容向左对齐， <code>-</code> 左右都有 <code>：</code>则内容居中, <code>：</code> 在 <code>-</code> 右 内容向右对齐.</p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p><code>&gt;</code> 后加内容</p>
-<p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;难得夜这样的深，难得炉火这般的温，难得无言的相对，一对寂寞的灵魂。</span><br><span class="line"></span><br><span class="line">&gt;难得夜这样的深，</span><br><span class="line">&gt;难得炉火这般的温，</span><br><span class="line">&gt;难得无言的相对，</span><br><span class="line">&gt;一对寂寞的灵魂。</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<blockquote>
-<p>难得夜这样的深，难得炉火这般的温，难得无言的相对，一对寂寞的灵魂。</p>
-</blockquote>
-<blockquote>
-<p>难得夜这样的深，<br>难得炉火这般的温，<br>难得无言的相对，<br>一对寂寞的灵魂。</p>
-</blockquote>
-<h3 id="一些注意事项"><a href="#一些注意事项" class="headerlink" title="一些注意事项"></a>一些注意事项</h3><ol>
-<li>输入相应的标识符号时要将输入法改成<strong>英文</strong>。</li>
-<li>反引号在键盘 tab 键上方。</li>
-<li>中文与数字、英文间最好加上一个<strong>空格</strong>。</li>
-<li>列表每一项中如果有多个小段，在开头 <code>1.</code> 或 <code>-</code> 与文字之间要加 4 个空格。</li>
-<li>不同的地方可能会有不同的 CSS 样式，注意作出不同的修改。</li>
-<li>多多使用哈哈哈。</li>
-</ol>
+<p>刚做的修改不见了<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/8.png" alt="刚做的修改不见了"></p>
+<p>试着将版本滚回修改后<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/9.png" alt="试着将版本滚回修改后"><br>因为现在已经是最初的版本，所以要回到修改后有点相当于<strong>回到未来</strong>，<code>git log</code>这条命令已经看不到修改后的日志了，这时<code>git reflog</code>就派上了用场，可以看到<code>make some changes</code>的那次提交的版本号是<code>7e4ebe7</code>。</p>
+<hr>
+<p>试试这一条版本回退的命令<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/10.png" alt="试试这一条版本回退的命令"></p>
+<p>消失的修改又回来了<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/11.png" alt="消失的修改又回来了"></p>
+<h2 id="分支部分"><a href="#分支部分" class="headerlink" title="分支部分"></a>分支部分</h2><p>试用下分支功能<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/12.png" alt="试用下分支功能"><br>新建并切换到 dev 分支上，添加并提交 test1 文件。</p>
+<hr>
+<p>可以看到现在 dev 分支上有两个文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/13.png" alt="可以看到现在 dev 分支上有两个文件"></p>
+<p>切换回 master 分支<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/14.png" alt="切换回 master 分支"></p>
+<p>这时只有一个文件了 因为之前的提交是在 dev 分支上的<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/15.png" alt="这时只有一个文件了 因为之前的提交是在 dev 分支上的"></p>
+<p>把 dev 分支合并到 master 分支上<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/16.png" alt="把 dev 分支合并到 master 分支上"></p>
+<p>这时 master 分支也有两个文件了<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/17.png" alt="这时 master 分支也有两个文件了"></p>
+<p>再把 dev 分支删掉<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/18.png" alt="再把 dev 分支删掉"></p>
+<h2 id="远程仓库部分"><a href="#远程仓库部分" class="headerlink" title="远程仓库部分"></a>远程仓库部分</h2><p>这部分试用<strong>把文件传上 GitHub</strong>和<strong>从 GitHub 抓取文件</strong>的命令。<br>之前已经把SSH密钥上传到GitHub上了，这是用来在本地电脑和 GitHub 建立关联的关键部分，但是这里就省略啦，可以看<strong>stormzhang</strong>张哥的<strong>从 0 开始学习 GitHub 系列</strong>，里面有详细讲添加SSH密钥的过程。</p>
+<h3 id="把文件传上-GitHub"><a href="#把文件传上-GitHub" class="headerlink" title="把文件传上 GitHub"></a>把文件传上 GitHub</h3><p>首先在 GitHub 上创建一个空的仓库<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/19.png" alt="首先在 GitHub 上创建一个空的仓库"></p>
+<p>关联远程仓库并做第一次推送<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/20.png" alt="关联远程仓库并做第一次推送"></p>
+<p>顺利将本地内容推到 GitHub 上<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/21.png" alt="顺利将本地内容推到 GitHub 上"></p>
+<p>在 GitHub 上创建了一个 README 文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/22.png" alt="在 GitHub 上创建了一个 README 文件"></p>
+<p>在本地文件夹新建了一个 newfile 文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/23.png" alt="在本地文件夹新建了一个 newfile 文件"></p>
+<p>试着将新文件推到远程仓库但出现了错误<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/24.png" alt="试着将新文件推到远程仓库但出现了错误"><br>这里产生错误的原因是在远程仓库上创建了一个 README 文件，而本地没有这个文件，所有本地和远程<strong>并不同步</strong>，远程仓库有新的更新，而本地并没有跟上。解决这个问题的方法是在推送（push）之前先抓取（pull）一下，保持了本地和远程的<strong>同步</strong>后，就能把本地的新提交推到远程仓库里了。（<em>之前有把 newfile 进行 add 和 commit 的过程，好像截漏了。</em>）</p>
+<hr>
+<p>抓取之后本地会有 README 文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/25.png" alt="抓取之后本地会有 README 文件"></p>
+<p>推送（push）过程<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/26.png" alt="推送（push）过程"></p>
+<p>推送完成后 GitHub 上有了新提交的文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/27.png" alt="推送完成后 GitHub 上有了新提交的文件"></p>
+<h3 id="从-GitHub-抓取文件"><a href="#从-GitHub-抓取文件" class="headerlink" title="从 GitHub 抓取文件"></a>从 GitHub 抓取文件</h3><p>随便找了一个项目 复制下仓库地址<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/28.png" alt="随便找了一个项目 复制下仓库地址"></p>
+<p>用 git clone 命令抓取远程仓库中的文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/29.png" alt="用 git clone 命令抓取远程仓库中的文件"></p>
+<p>抓取成功<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/30.png" alt="抓取成功"></p>
+<h3 id="将一个有很多文件的本地仓库一次性推送上-GitHub"><a href="#将一个有很多文件的本地仓库一次性推送上-GitHub" class="headerlink" title="将一个有很多文件的本地仓库一次性推送上 GitHub"></a>将一个有很多文件的本地仓库一次性推送上 GitHub</h3><p>有很多文件的仓库<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/31.png" alt="有很多文件的仓库"></p>
+<p>创建远程仓库<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/32.png" alt="创建远程仓库"></p>
+<p>初始化本地 GIT 仓库并提交文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/33.png" alt="初始化本地 GIT 仓库并提交文件"></p>
+<p>这里一次提交了很多文件，到网上搜了一次添加（add）多个文件的<a href="https://blog.csdn.net/lijing742180/article/details/84636206" target="_blank" rel="noopener">方法</a>，发现<code>git add --all</code> 这条命令可以实现，而提交（commit）就不用啦，普通的提交（commit）命令就能提交多个文件。</p>
+<hr>
+<p>建立与远程仓库的关联并推送<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/34.png" alt="建立与远程仓库的关联并推送"></p>
+<p>GitHub 仓库上有了所有文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/35.png" alt="GitHub 仓库上有了所有文件"></p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>基本上现在要用到的 GIT 命令都学会使用了，现在关于<strong>分支</strong>和<strong>多人协作</strong>部分还不太熟悉，以后需要再去学吧。</p>
 
       
 
@@ -296,7 +284,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
@@ -352,7 +340,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://bunnrecord.github.io/2019/07/22/190630-markdown-note/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://bunnrecord.github.io/2019/07/23/190720-GIT-practice/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -366,18 +354,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/23/190720-GIT-note/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          学习使用 GIT
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/21/190721-first-blog/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第一篇！</div>
+    <a href="/2019/07/23/190720-GIT-note/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">学习使用 GIT</div>
       <i class="icon-circle-right"></i>
     </a>
   

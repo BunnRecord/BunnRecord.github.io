@@ -32,7 +32,7 @@
 <meta property="og:description" content="之前试着在 GitHub 上搭一个自己的博客，并试着写上一些内容。搭是基本搭好了，但是不知道怎么把内容发布上去，所以还是老老实实来跟着廖雪峰的 GIT 教程来学习 GIT 怎么用，又看了下 stormzhang 的从 0 开始学习 GitHub 系列。这篇就来做一下记录吧。  什么是 GITGIT 是分布式版本控制系统，就我自己理解的话，这就是一个工具，让使用者能记录每次文件的改动，还能方便多人">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://bunnrecord.github.io/2019/07/23/190720-GIT-note/1.jpg">
-<meta property="og:updated_time" content="2019-07-23T04:50:14.734Z">
+<meta property="og:updated_time" content="2019-07-23T05:08:35.044Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习使用 GIT">
 <meta name="twitter:description" content="之前试着在 GitHub 上搭一个自己的博客，并试着写上一些内容。搭是基本搭好了，但是不知道怎么把内容发布上去，所以还是老老实实来跟着廖雪峰的 GIT 教程来学习 GIT 怎么用，又看了下 stormzhang 的从 0 开始学习 GitHub 系列。这篇就来做一下记录吧。  什么是 GITGIT 是分布式版本控制系统，就我自己理解的话，这就是一个工具，让使用者能记录每次文件的改动，还能方便多人">
@@ -196,6 +196,9 @@
 <p>1.对代码进行修改，有时候修改之后出现了错误，就能通过 GIT 将代码回退到之前的版本，对于不同时候做出的修改，通过 GIT 也能查看每次修改了什么内容。</p>
 <p>2.对于一个大的产品，需要很多人一起共同协作，每个人作出的修改，GIT 能很方便地查看到，也能常常与和他人保持同步，将别人最新的修改抓取到自己本地的文件中。</p>
 <p>3.有时要开发一个新功能，也能通过 GIT 创建一个分支，在保持主程序不受影响的情况下，在新分支上开发新功能，开发完成测试通过后，再把新功能加入主程序。</p>
+<a id="more"></a>
+
+
 <h2 id="GIT-的安装及其他使用"><a href="#GIT-的安装及其他使用" class="headerlink" title="GIT 的安装及其他使用"></a>GIT 的安装及其他使用</h2><ul>
 <li><p>在 GIT 的官网上下载<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">安装包</a>，安装后在命令行输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your Name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
@@ -217,7 +220,7 @@
 </li>
 <li><p>分支管理<br>这一部分就关系到不同的工作线，主分支（master）用做一条稳定的分支线，在此基础上创建开发分支（dev），开发分支上做新功能的开发，而不影响的主分支，测试完成后再合并到主分支上。<br>这里比较麻烦的是<strong>分支模式</strong>和<strong>冲突的解决</strong>。<br><code>Fast-forword</code>分支模式合并删除后开发分支的信息历史就会被丢掉，禁用掉<code>Fast-forword</code>分支模式后每一次的合并生成一个新的 commit ，在分支历史上就能看出分支信息。<br>冲突产生是因为在不同的分支做了不同的修改和提交，修改产生差异的地方，解决冲突，再进行合并。<br>另外还有 <strong>stash功能</strong> 和 <strong>推送分支功能</strong> 。</p>
 </li>
-<li><p>标签管理<br>类似于 commit ，在一个大阶段介绍后打上一个 tag ，命名为 v1.0 或 v2.0 更方便查看。</p>
+<li><p>标签管理<br>类似于 commit ，在一个大阶段结束后打上一个 tag ，命名为 v1.0 或 v2.0 更方便查看。</p>
 </li>
 <li><p>自定义GIT<br>利用 <code>alias</code> 将长的命令精简化，<em>忽略特殊文件</em>（不太懂），搭建 GIT 服务器。</p>
 </li>
@@ -314,6 +317,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/07/23/190720-GIT-practice/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          GIT 实战
+        
+      </div>
+    </a>
   
   
     <a href="/2019/07/22/190630-markdown-note/" id="article-nav-older" class="article-nav-link-wrap">
@@ -451,11 +463,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
