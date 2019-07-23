@@ -379,7 +379,7 @@
 .0;-webkit-overflow-scrolling:touch;overflow-scrolling:touch}tools-
 .colshow{opacity:1}tools-colhide{z-index:0}tools-col tools-nav{display:none
 .}tools-col tools-section,tools-col tools-
-.wrap{height:90%;color:#e5e5e5;width:360px;overflow:hidden;overflow-y:auto
+.wrap{height:100%;color:#e5e5e5;width:360px;overflow:hidden;overflow-y:auto
 .}tools-col tools-section ::-webkit-scrollbar,tools-col tools-wrap ::-webkit-
 .scrollbar{display:none}tools-col tools-section search-
 .wrap{width:310px;margin:20px 20px 10px;position:relative}tools-col tools-
