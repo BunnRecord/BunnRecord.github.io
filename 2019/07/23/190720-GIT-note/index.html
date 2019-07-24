@@ -209,7 +209,7 @@
 <h2 id="GIT-的主要功能"><a href="#GIT-的主要功能" class="headerlink" title="GIT 的主要功能"></a>GIT 的主要功能</h2><p>根据<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰的 GIT 教程</a>，主要功能可以分五个点：<strong>时光机穿梭</strong>、<strong>远程仓库</strong>、<strong>分支管理</strong>、<strong>标签管理</strong>、<strong>自定义GIT</strong>，下面分点做一些笔记。</p>
 <ul>
 <li><p>时光机穿梭<br>这一部分是用来实现 <em>记录文件的改动</em> 和 <em>适时回退或前进版本</em>。<br>主要要理解 工作区 、暂存区 和 版本库 的特点：工作区（Working       Directory）就是我们本地的文件夹，新建和修改文件的地方；版本库（Repository）是 GIT 发挥作用的地方，而暂存区（stage）属于版本库。</p>
-<p><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-note/1.jpg" alt="关系图"> </p>
+<p><img src="/2019/07/23/190720-GIT-note/1.jpg" alt="关系图"> </p>
 <p>  如图可见，工作区的文件完成工作后经过添加（add），就会进入暂存区（stage），暂存区的文件经过一次提交（commit），就能保存在库里面。而 GIT 就是记录了每次的提交，生成日志（log）和版本号（commit ID）。利用这两个信息就能实现版本的回退和前进，用工作区和版本库中的文件作对比就能显示出作了哪些修改。没事常 commit 一下，就能把工作串成一条时间线，按时间分段，这一段时间做了错的修改，就回到上一段时间去。</p>
 </li>
 <li><p>远程仓库<br>这一部分关系到合作。将本地仓库与远程仓库连接，就更方便让人查看和进行多人协作，远程仓库还能起到一个备份的作用。</p>
@@ -476,11 +476,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>

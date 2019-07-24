@@ -221,51 +221,51 @@
         <blockquote>
 <p>这篇试用一下之前学到的 GIT 命令</p>
 </blockquote>
-<h2 id="提交及版本回退部分"><a href="#提交及版本回退部分" class="headerlink" title="提交及版本回退部分"></a>提交及版本回退部分</h2><p>首先创建一个空的文件夹 并初始化 GIT 仓库<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/1.png" alt="首先创建一个空的文件夹 并初始化 GIT 仓库"></p>
+<h2 id="提交及版本回退部分"><a href="#提交及版本回退部分" class="headerlink" title="提交及版本回退部分"></a>提交及版本回退部分</h2><p>首先创建一个空的文件夹 并初始化 GIT 仓库<br><img src="/2019/07/23/190720-GIT-practice/1.png" alt="首先创建一个空的文件夹 并初始化 GIT 仓库"></p>
 <a id="more"></a>
 
-<p>创建一个纯文本文件<img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/2.png" alt="创建一个纯文本文件"></p>
-<p>将文件添加并提交到仓库（注意提交时附加的信息）<img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/3.png" alt="将文件添加并提交到仓库（注意提交时附加的信息）"></p>
-<p>修改一下纯文本文件<img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/4.png" alt="修改一下纯文本文件"></p>
-<p>用 status 命令查看状态 用 diff 命令查看修改的地方<img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/5.png" alt="用 status 命令查看状态 用 diff 命令查看修改的地方"><br>这里可以看到我们修改了文件但没有 add 和 commit ，所以 status 命令就告诉了我们，修改（changes）还没有添加（add）到缓存区（stage）和提交（commit）到仓库。<br>而 diff 命令就很直观地告诉了我们加了一句话（绿色字）。</p>
+<p>创建一个纯文本文件<img src="/2019/07/23/190720-GIT-practice/2.png" alt="创建一个纯文本文件"></p>
+<p>将文件添加并提交到仓库（注意提交时附加的信息）<img src="/2019/07/23/190720-GIT-practice/3.png" alt="将文件添加并提交到仓库（注意提交时附加的信息）"></p>
+<p>修改一下纯文本文件<img src="/2019/07/23/190720-GIT-practice/4.png" alt="修改一下纯文本文件"></p>
+<p>用 status 命令查看状态 用 diff 命令查看修改的地方<img src="/2019/07/23/190720-GIT-practice/5.png" alt="用 status 命令查看状态 用 diff 命令查看修改的地方"><br>这里可以看到我们修改了文件但没有 add 和 commit ，所以 status 命令就告诉了我们，修改（changes）还没有添加（add）到缓存区（stage）和提交（commit）到仓库。<br>而 diff 命令就很直观地告诉了我们加了一句话（绿色字）。</p>
 <hr>
-<p>再做一次添加并提交（注意提交时的信息）<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/6.png" alt="再做一次添加并提交（注意提交时的信息）"></p>
-<p>查看提交日志并尝试回到修改前的版本<img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/7.png" alt="查看提交日志并尝试回到修改前的版本"><br>这里试用GIT很重要的一个功能<strong>版本回退</strong>，试着用<code>git reset --hard HEAD^</code>这条命令去实现，但没有成功，查了下<a href="https://blog.csdn.net/qq_32623363/article/details/78968077" target="_blank" rel="noopener">原因</a>，原来是cmd控制台输入<code>^</code>就会遇到这个问题，换了条回退的命令，结果成功了。</p>
+<p>再做一次添加并提交（注意提交时的信息）<br><img src="/2019/07/23/190720-GIT-practice/6.png" alt="再做一次添加并提交（注意提交时的信息）"></p>
+<p>查看提交日志并尝试回到修改前的版本<img src="/2019/07/23/190720-GIT-practice/7.png" alt="查看提交日志并尝试回到修改前的版本"><br>这里试用GIT很重要的一个功能<strong>版本回退</strong>，试着用<code>git reset --hard HEAD^</code>这条命令去实现，但没有成功，查了下<a href="https://blog.csdn.net/qq_32623363/article/details/78968077" target="_blank" rel="noopener">原因</a>，原来是cmd控制台输入<code>^</code>就会遇到这个问题，换了条回退的命令，结果成功了。</p>
 <hr>
-<p>刚做的修改不见了<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/8.png" alt="刚做的修改不见了"></p>
-<p>试着将版本滚回修改后<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/9.png" alt="试着将版本滚回修改后"><br>因为现在已经是最初的版本，所以要回到修改后有点相当于<strong>回到未来</strong>，<code>git log</code>这条命令已经看不到修改后的日志了，这时<code>git reflog</code>就派上了用场，可以看到<code>make some changes</code>的那次提交的版本号是<code>7e4ebe7</code>。</p>
+<p>刚做的修改不见了<br><img src="/2019/07/23/190720-GIT-practice/8.png" alt="刚做的修改不见了"></p>
+<p>试着将版本滚回修改后<br><img src="/2019/07/23/190720-GIT-practice/9.png" alt="试着将版本滚回修改后"><br>因为现在已经是最初的版本，所以要回到修改后有点相当于<strong>回到未来</strong>，<code>git log</code>这条命令已经看不到修改后的日志了，这时<code>git reflog</code>就派上了用场，可以看到<code>make some changes</code>的那次提交的版本号是<code>7e4ebe7</code>。</p>
 <hr>
-<p>试试这一条版本回退的命令<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/10.png" alt="试试这一条版本回退的命令"></p>
-<p>消失的修改又回来了<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/11.png" alt="消失的修改又回来了"></p>
-<h2 id="分支部分"><a href="#分支部分" class="headerlink" title="分支部分"></a>分支部分</h2><p>试用下分支功能<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/12.png" alt="试用下分支功能"><br>新建并切换到 dev 分支上，添加并提交 test1 文件。</p>
+<p>试试这一条版本回退的命令<br><img src="/2019/07/23/190720-GIT-practice/10.png" alt="试试这一条版本回退的命令"></p>
+<p>消失的修改又回来了<br><img src="/2019/07/23/190720-GIT-practice/11.png" alt="消失的修改又回来了"></p>
+<h2 id="分支部分"><a href="#分支部分" class="headerlink" title="分支部分"></a>分支部分</h2><p>试用下分支功能<br><img src="/2019/07/23/190720-GIT-practice/12.png" alt="试用下分支功能"><br>新建并切换到 dev 分支上，添加并提交 test1 文件。</p>
 <hr>
-<p>可以看到现在 dev 分支上有两个文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/13.png" alt="可以看到现在 dev 分支上有两个文件"></p>
-<p>切换回 master 分支<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/14.png" alt="切换回 master 分支"></p>
-<p>这时只有一个文件了 因为之前的提交是在 dev 分支上的<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/15.png" alt="这时只有一个文件了 因为之前的提交是在 dev 分支上的"></p>
-<p>把 dev 分支合并到 master 分支上<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/16.png" alt="把 dev 分支合并到 master 分支上"></p>
-<p>这时 master 分支也有两个文件了<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/17.png" alt="这时 master 分支也有两个文件了"></p>
-<p>再把 dev 分支删掉<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/18.png" alt="再把 dev 分支删掉"></p>
+<p>可以看到现在 dev 分支上有两个文件<br><img src="/2019/07/23/190720-GIT-practice/13.png" alt="可以看到现在 dev 分支上有两个文件"></p>
+<p>切换回 master 分支<br><img src="/2019/07/23/190720-GIT-practice/14.png" alt="切换回 master 分支"></p>
+<p>这时只有一个文件了 因为之前的提交是在 dev 分支上的<br><img src="/2019/07/23/190720-GIT-practice/15.png" alt="这时只有一个文件了 因为之前的提交是在 dev 分支上的"></p>
+<p>把 dev 分支合并到 master 分支上<br><img src="/2019/07/23/190720-GIT-practice/16.png" alt="把 dev 分支合并到 master 分支上"></p>
+<p>这时 master 分支也有两个文件了<br><img src="/2019/07/23/190720-GIT-practice/17.png" alt="这时 master 分支也有两个文件了"></p>
+<p>再把 dev 分支删掉<br><img src="/2019/07/23/190720-GIT-practice/18.png" alt="再把 dev 分支删掉"></p>
 <h2 id="远程仓库部分"><a href="#远程仓库部分" class="headerlink" title="远程仓库部分"></a>远程仓库部分</h2><p>这部分试用<strong>把文件传上 GitHub</strong>和<strong>从 GitHub 抓取文件</strong>的命令。<br>之前已经把SSH密钥上传到GitHub上了，这是用来在本地电脑和 GitHub 建立关联的关键部分，但是这里就省略啦，可以看<strong>stormzhang</strong>张哥的<strong>从 0 开始学习 GitHub 系列</strong>，里面有详细讲添加SSH密钥的过程。</p>
-<h3 id="把文件传上-GitHub"><a href="#把文件传上-GitHub" class="headerlink" title="把文件传上 GitHub"></a>把文件传上 GitHub</h3><p>首先在 GitHub 上创建一个空的仓库<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/19.png" alt="首先在 GitHub 上创建一个空的仓库"></p>
-<p>关联远程仓库并做第一次推送<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/20.png" alt="关联远程仓库并做第一次推送"></p>
-<p>顺利将本地内容推到 GitHub 上<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/21.png" alt="顺利将本地内容推到 GitHub 上"></p>
-<p>在 GitHub 上创建了一个 README 文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/22.png" alt="在 GitHub 上创建了一个 README 文件"></p>
-<p>在本地文件夹新建了一个 newfile 文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/23.png" alt="在本地文件夹新建了一个 newfile 文件"></p>
-<p>试着将新文件推到远程仓库但出现了错误<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/24.png" alt="试着将新文件推到远程仓库但出现了错误"><br>这里产生错误的原因是在远程仓库上创建了一个 README 文件，而本地没有这个文件，所有本地和远程<strong>并不同步</strong>，远程仓库有新的更新，而本地并没有跟上。解决这个问题的方法是在推送（push）之前先抓取（pull）一下，保持了本地和远程的<strong>同步</strong>后，就能把本地的新提交推到远程仓库里了。（<em>之前有把 newfile 进行 add 和 commit 的过程，好像截漏了。</em>）</p>
+<h3 id="把文件传上-GitHub"><a href="#把文件传上-GitHub" class="headerlink" title="把文件传上 GitHub"></a>把文件传上 GitHub</h3><p>首先在 GitHub 上创建一个空的仓库<br><img src="/2019/07/23/190720-GIT-practice/19.png" alt="首先在 GitHub 上创建一个空的仓库"></p>
+<p>关联远程仓库并做第一次推送<br><img src="/2019/07/23/190720-GIT-practice/20.png" alt="关联远程仓库并做第一次推送"></p>
+<p>顺利将本地内容推到 GitHub 上<br><img src="/2019/07/23/190720-GIT-practice/21.png" alt="顺利将本地内容推到 GitHub 上"></p>
+<p>在 GitHub 上创建了一个 README 文件<br><img src="/2019/07/23/190720-GIT-practice/22.png" alt="在 GitHub 上创建了一个 README 文件"></p>
+<p>在本地文件夹新建了一个 newfile 文件<br><img src="/2019/07/23/190720-GIT-practice/23.png" alt="在本地文件夹新建了一个 newfile 文件"></p>
+<p>试着将新文件推到远程仓库但出现了错误<br><img src="/2019/07/23/190720-GIT-practice/24.png" alt="试着将新文件推到远程仓库但出现了错误"><br>这里产生错误的原因是在远程仓库上创建了一个 README 文件，而本地没有这个文件，所有本地和远程<strong>并不同步</strong>，远程仓库有新的更新，而本地并没有跟上。解决这个问题的方法是在推送（push）之前先抓取（pull）一下，保持了本地和远程的<strong>同步</strong>后，就能把本地的新提交推到远程仓库里了。（<em>之前有把 newfile 进行 add 和 commit 的过程，好像截漏了。</em>）</p>
 <hr>
-<p>抓取之后本地会有 README 文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/25.png" alt="抓取之后本地会有 README 文件"></p>
-<p>推送（push）过程<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/26.png" alt="推送（push）过程"></p>
-<p>推送完成后 GitHub 上有了新提交的文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/27.png" alt="推送完成后 GitHub 上有了新提交的文件"></p>
-<h3 id="从-GitHub-抓取文件"><a href="#从-GitHub-抓取文件" class="headerlink" title="从 GitHub 抓取文件"></a>从 GitHub 抓取文件</h3><p>随便找了一个项目 复制下仓库地址<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/28.png" alt="随便找了一个项目 复制下仓库地址"></p>
-<p>用 git clone 命令抓取远程仓库中的文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/29.png" alt="用 git clone 命令抓取远程仓库中的文件"></p>
-<p>抓取成功<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/30.png" alt="抓取成功"></p>
-<h3 id="将一个有很多文件的本地仓库一次性推送上-GitHub"><a href="#将一个有很多文件的本地仓库一次性推送上-GitHub" class="headerlink" title="将一个有很多文件的本地仓库一次性推送上 GitHub"></a>将一个有很多文件的本地仓库一次性推送上 GitHub</h3><p>有很多文件的仓库<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/31.png" alt="有很多文件的仓库"></p>
-<p>创建远程仓库<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/32.png" alt="创建远程仓库"></p>
-<p>初始化本地 GIT 仓库并提交文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/33.png" alt="初始化本地 GIT 仓库并提交文件"></p>
+<p>抓取之后本地会有 README 文件<br><img src="/2019/07/23/190720-GIT-practice/25.png" alt="抓取之后本地会有 README 文件"></p>
+<p>推送（push）过程<br><img src="/2019/07/23/190720-GIT-practice/26.png" alt="推送（push）过程"></p>
+<p>推送完成后 GitHub 上有了新提交的文件<br><img src="/2019/07/23/190720-GIT-practice/27.png" alt="推送完成后 GitHub 上有了新提交的文件"></p>
+<h3 id="从-GitHub-抓取文件"><a href="#从-GitHub-抓取文件" class="headerlink" title="从 GitHub 抓取文件"></a>从 GitHub 抓取文件</h3><p>随便找了一个项目 复制下仓库地址<br><img src="/2019/07/23/190720-GIT-practice/28.png" alt="随便找了一个项目 复制下仓库地址"></p>
+<p>用 git clone 命令抓取远程仓库中的文件<br><img src="/2019/07/23/190720-GIT-practice/29.png" alt="用 git clone 命令抓取远程仓库中的文件"></p>
+<p>抓取成功<br><img src="/2019/07/23/190720-GIT-practice/30.png" alt="抓取成功"></p>
+<h3 id="将一个有很多文件的本地仓库一次性推送上-GitHub"><a href="#将一个有很多文件的本地仓库一次性推送上-GitHub" class="headerlink" title="将一个有很多文件的本地仓库一次性推送上 GitHub"></a>将一个有很多文件的本地仓库一次性推送上 GitHub</h3><p>有很多文件的仓库<br><img src="/2019/07/23/190720-GIT-practice/31.png" alt="有很多文件的仓库"></p>
+<p>创建远程仓库<br><img src="/2019/07/23/190720-GIT-practice/32.png" alt="创建远程仓库"></p>
+<p>初始化本地 GIT 仓库并提交文件<br><img src="/2019/07/23/190720-GIT-practice/33.png" alt="初始化本地 GIT 仓库并提交文件"></p>
 <p>这里一次提交了很多文件，到网上搜了一次添加（add）多个文件的<a href="https://blog.csdn.net/lijing742180/article/details/84636206" target="_blank" rel="noopener">方法</a>，发现<code>git add --all</code> 这条命令可以实现，而提交（commit）就不用啦，普通的提交（commit）命令就能提交多个文件。</p>
 <hr>
-<p>建立与远程仓库的关联并推送<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/34.png" alt="建立与远程仓库的关联并推送"></p>
-<p>GitHub 仓库上有了所有文件<br><img src="//bunnrecord.github.io/2019/07/23/190720-GIT-practice/35.png" alt="GitHub 仓库上有了所有文件"></p>
+<p>建立与远程仓库的关联并推送<br><img src="/2019/07/23/190720-GIT-practice/34.png" alt="建立与远程仓库的关联并推送"></p>
+<p>GitHub 仓库上有了所有文件<br><img src="/2019/07/23/190720-GIT-practice/35.png" alt="GitHub 仓库上有了所有文件"></p>
 <h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>基本上现在要用到的 GIT 命令都学会使用了，现在关于<strong>分支</strong>和<strong>多人协作</strong>部分还不太熟悉，以后需要再去学吧。</p>
 
       
@@ -503,11 +503,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
