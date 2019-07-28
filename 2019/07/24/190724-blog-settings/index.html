@@ -200,90 +200,69 @@
 <li>文章显示摘要和插入标签</li>
 </ul>
 <a id="more"></a>
+
 <br>
-<p><strong>开头先说明一下</strong>，所有做出的修改保存后，还需要执行 <code>hexo clean</code> -&gt; <code>hexo g</code> -&gt; <code>hexo d</code> 这三条基本命令将修改部署到网上，而有时候执行这三条命令的地方有所不同，最保险的方法是 <code>cd themes</code> 执行一次，然后 <code>cd..</code> 回到根目录再执行一次。<br>
-<img src="/2019/07/24/190724-blog-settings/2.png" alt="如图"></p>
-<h2 id="基本信息的修改"><a class="markdownIt-Anchor" href="#基本信息的修改"></a> 基本信息的修改</h2>
-<ul>
+
+<p><strong>开头先说明一下</strong>，所有做出的修改保存后，还需要执行 <code>hexo clean</code> -&gt; <code>hexo g</code> -&gt; <code>hexo d</code> 这三条基本命令将修改部署到网上，而有时候执行这三条命令的地方有所不同，最保险的方法是 <code>cd themes</code> 执行一次，然后 <code>cd..</code> 回到根目录再执行一次。<br><img src="/2019/07/24/190724-blog-settings/2.png" alt="如图"></p>
+<h2 id="基本信息的修改"><a href="#基本信息的修改" class="headerlink" title="基本信息的修改"></a>基本信息的修改</h2><ul>
 <li>网页基本信息的修改 ：打开 <code>BLOG\_config.yml</code> 配置文件，修改 <code>site</code> 栏目下的 <code>title</code> 和 <code>author</code> ，这两个分别是 网站名字 和 博客页面作者名字。</li>
 <li>博客左边信息栏的修改 ：打开 <code>BLOG\themes\yilia\_config.yml</code> 配置文件，修改 <code>smart _menu</code> 栏目下的 <code>friends</code> 和 <code>about me</code> ，这两个是博客左边信息栏中点击会出现的信息。</li>
-<li>博客左边下方图标外接链接的修改：也是 <code>BLOG\themes\yilia\_config.yml</code> 配置文件，修改 <code>subnav</code> 栏目下的信息，我把自己需要让人能看到的外链填进去，不需要的就加 <code>#</code> 隐藏了。<br>
-<img src="/2019/07/24/190724-blog-settings/1.png" alt="如图"><br>
-PS：这里有个小插曲，我想把自己扫一扫添加我微信的截图放进去，结果只能放链接，所以找了个通过 GitHub 把图片上传生成链接的方法。参考： <a href="http://jingpin.jikexueyuan.com/article/36279.htmlc" target="_blank" rel="noopener">这里</a> 。</li>
+<li>博客左边下方图标外接链接的修改：也是 <code>BLOG\themes\yilia\_config.yml</code> 配置文件，修改 <code>subnav</code> 栏目下的信息，我把自己需要让人能看到的外链填进去，不需要的就加 <code>#</code> 隐藏了。<br><img src="/2019/07/24/190724-blog-settings/1.png" alt="如图"><br>PS：这里有个小插曲，我想把自己扫一扫添加我微信的截图放进去，结果只能放链接，所以找了个通过 GitHub 把图片上传生成链接的方法。参考： <a href="http://jingpin.jikexueyuan.com/article/36279.htmlc" target="_blank" rel="noopener">这里</a> 。</li>
 </ul>
-<h2 id="头像图标的修改"><a class="markdownIt-Anchor" href="#头像图标的修改"></a> 头像图标的修改</h2>
-<ul>
+<h2 id="头像图标的修改"><a href="#头像图标的修改" class="headerlink" title="头像图标的修改"></a>头像图标的修改</h2><ul>
 <li>博客头像的修改：头像存放在 <code>BLOG\themes\yilia\source\</code> 的任意位置，我参考网上新建了个 <code>assert</code> 文件夹，把头像存放在里面，地址为 <code>\themes\yilia\source\assert\1.jpg</code> 。然后打开 <code>BLOG\themes\yilia\_config.yml</code> 配置文件，修改 <code>favicon</code> 一栏为 <code>/themes/yilia/source/</code>，修改 <code>avatar</code> 头像一栏为 <code>/assert/1.jpg</code>。</li>
-<li>网页图标 icon 的修改：先去 <a href="http://www.bitbug.net/" target="_blank" rel="noopener">比特虫</a> 网站生成 icon 图标；图片放到hexo/source/img文件夹下，地址为 <code>\BLOG\source\img\bitbug_favicon.ico</code>；找到<code>BLOG\themes\modernist\layout_partial\head.ejs</code>，设置为</li>
+<li>网页图标 icon 的修改：先去 <a href="http://www.bitbug.net/" target="_blank" rel="noopener">比特虫</a> 网站生成 icon 图标；图片放到hexo/source/img文件夹下，地址为 <code>\BLOG\source\img\bitbug_favicon.ico</code>；找到<code>BLOG\themes\modernist\layout_partial\head.ejs</code>，设置为 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.favicon)&#123; %&gt;</span><br><span class="line">    &lt;link rel=&quot;icon&quot; href=&quot;/img/bitbug_favicon.ico&quot;&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.favicon)&#123; %&gt;</span><br><span class="line">    &lt;link rel=&quot;icon&quot; href=&quot;/img/bitbug_favicon.ico&quot;&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="添加所有文章处的缺失模块"><a class="markdownIt-Anchor" href="#添加所有文章处的缺失模块"></a> 添加所有文章处的缺失模块</h2>
-<p>用 cmd 控制台打开博客根目录 <code>\BLOG</code> ，输入命令 <code>npm i hexo-generator-json-content --save</code> ，再用编辑器打开 <code>BLOG\_config.yml</code> 配置文件，在最后添加以下代码：</p>
+<h2 id="添加所有文章处的缺失模块"><a href="#添加所有文章处的缺失模块" class="headerlink" title="添加所有文章处的缺失模块"></a>添加所有文章处的缺失模块</h2><p>用 cmd 控制台打开博客根目录 <code>\BLOG</code> ，输入命令 <code>npm i  hexo-generator-json-content --save</code> ，再用编辑器打开 <code>BLOG\_config.yml</code> 配置文件，在最后添加以下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">  meta: false</span><br><span class="line">  pages: false</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    date: true</span><br><span class="line">    path: true</span><br><span class="line">    text: false</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    slug: false</span><br><span class="line">    updated: false</span><br><span class="line">    comments: false</span><br><span class="line">    link: false</span><br><span class="line">    permalink: false</span><br><span class="line">    excerpt: false</span><br><span class="line">    categories: false</span><br><span class="line">    tags: true</span><br></pre></td></tr></table></figure>
-<h2 id="完善代码行号显示错乱"><a class="markdownIt-Anchor" href="#完善代码行号显示错乱"></a> 完善代码行号显示错乱</h2>
-<p>用编辑器打开 <code>\BLOG\themes\yilia\source\main.0cf68a.css</code> 文件，删除 <code>white-space:pre-wrap;</code> 这行代码。</p>
-<h2 id="添加访问量统计"><a class="markdownIt-Anchor" href="#添加访问量统计"></a> 添加访问量统计</h2>
-<p>用编辑器打开 <code>\BLOG\themes\yilia\layout\_partial</code> 文件，用以下代码替换：</p>
+
+<h2 id="完善代码行号显示错乱"><a href="#完善代码行号显示错乱" class="headerlink" title="完善代码行号显示错乱"></a>完善代码行号显示错乱</h2><p>用编辑器打开 <code>\BLOG\themes\yilia\source\main.0cf68a.css</code> 文件，删除 <code>white-space:pre-wrap;</code> 这行代码。 </p>
+<h2 id="添加访问量统计"><a href="#添加访问量统计" class="headerlink" title="添加访问量统计"></a>添加访问量统计</h2><p>用编辑器打开 <code>\BLOG\themes\yilia\layout\_partial</code> 文件，用以下代码替换：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer id=&quot;footer&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;div id=&quot;footer-info&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;footer-left&quot;&gt;</span><br><span class="line">        &amp;copy; &lt;%= date(new Date(), &apos;YYYY&apos;) %&gt; &lt;%= config.author || config.title %&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;footer-right&quot;&gt;</span><br><span class="line">          &lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot;&gt;Hexo&lt;/a&gt;  Theme &lt;a href=&quot;https://github.com/litten/hexo-theme-yilia&quot; target=&quot;_blank&quot;&gt;Yilia&lt;/a&gt; by Litten</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div calss=&quot;count-span&quot;&gt;</span><br><span class="line">      &lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;</span><br><span class="line">          总访问量: &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/footer&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>其中最后一句 <code>&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</code> 是用来添加  <a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子统计</a> 。中间 <code>&lt;div calss=&quot;count-span&quot;&gt; &lt;span id=&quot;busuanzi_container_site_pv&quot;&gt; 总访问量: &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt; &lt;/div&gt;</code> 是用来添加站点访问量。<br>
-还有一些添加 总访客数、文章阅读量 的操作，觉得自己不需要就没添加了，可以参考 <a href="http://www.janszeng.top/2017/08/30/hexo_yilia_count/#0x02-%E4%B8%8D%E8%92%9C%E5%AD%90%E9%85%8D%E7%BD%AE" target="_blank" rel="noopener">这个</a> 。</p>
-<h2 id="添加顶部加载条"><a class="markdownIt-Anchor" href="#添加顶部加载条"></a> 添加顶部加载条</h2>
-<p>用编辑器打开 <code>BLOG\themes\yilia\layout\_partial\head.ejs</code> 配置文件。<br>
-在这段代码：</p>
+
+<p>其中最后一句 <code>&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</code> 是用来添加  <a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子统计</a> 。中间 <code>&lt;div calss=&quot;count-span&quot;&gt;
+      &lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;
+          总访问量: &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;</code> 是用来添加站点访问量。<br>还有一些添加 总访客数、文章阅读量 的操作，觉得自己不需要就没添加了，可以参考 <a href="http://www.janszeng.top/2017/08/30/hexo_yilia_count/#0x02-%E4%B8%8D%E8%92%9C%E5%AD%90%E9%85%8D%E7%BD%AE" target="_blank" rel="noopener">这个</a> 。</p>
+<h2 id="添加顶部加载条"><a href="#添加顶部加载条" class="headerlink" title="添加顶部加载条"></a>添加顶部加载条</h2><p>用编辑器打开 <code>BLOG\themes\yilia\layout\_partial\head.ejs</code> 配置文件。<br>在这段代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot;&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; &gt;</span><br><span class="line">&lt;link rel=&quot;dns-prefetch&quot; href=&quot;&lt;%= config.url %&gt;&quot;&gt;</span><br><span class="line">&lt;title&gt;&lt;% if (title)&#123; %&gt;&lt;%= title %&gt; | &lt;% &#125; %&gt;&lt;%= config.title %&gt;&lt;/title&gt;</span><br><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;&gt;</span><br></pre></td></tr></table></figure>
+
 <p>下方添加：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;//cdn.bootcss.com/pace/1.0.2/pace.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;link href=&quot;//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">    .pace .pace-progress &#123;</span><br><span class="line">        background: #6d6d6d; /*进度条颜色*/</span><br><span class="line">        height: 2px;</span><br><span class="line">    &#125;</span><br><span class="line">    .pace .pace-progress-inner &#123;</span><br><span class="line">         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #6d6d6d; /*阴影颜色*/</span><br><span class="line">    &#125;</span><br><span class="line">    .pace .pace-activity &#123;</span><br><span class="line">        border-top-color: #6d6d6d;    /*上边框颜色*/</span><br><span class="line">        border-left-color: #6d6d6d;    /*左边框颜色*/</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/style&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="文章显示目录"><a class="markdownIt-Anchor" href="#文章显示目录"></a> 文章显示目录</h2>
-<p>有两种方式显示目录。</p>
+
+<h2 id="文章显示目录"><a href="#文章显示目录" class="headerlink" title="文章显示目录"></a>文章显示目录</h2><p>有两种方式显示目录。</p>
 <ul>
-<li>
-<p>一种方式是每篇文章右下方都显示目录。<br>
-用编辑器打开 <code>BLOG\themes\yilia\_config.yml</code> 配置文件，修改 <code>toc: 2</code> 。<br>
-<img src="/2019/07/24/190724-blog-settings/5.png" alt="如图"></p>
-</li>
-<li>
-<p>另一种方式是单独一篇文章右下方显示目录。<br>
-修改 <code>toc: 1</code> ，而在每篇新建文章开头填入 <code>toc = ture</code> 。<br>
-例如：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: new</span><br><span class="line">date: 2019-07-24 13:44:30</span><br><span class="line">tags:</span><br><span class="line">toc: ture</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-</li>
+<li>一种方式是每篇文章右下方都显示目录。<br>用编辑器打开 <code>BLOG\themes\yilia\_config.yml</code> 配置文件，修改 <code>toc: 2</code> 。<br><img src="/2019/07/24/190724-blog-settings/5.png" alt="如图"></li>
+<li>另一种方式是单独一篇文章右下方显示目录。<br>修改 <code>toc: 1</code> ，而在每篇新建文章开头填入 <code>toc = ture</code> 。<br>例如：</li>
 </ul>
-<h2 id="文章内插入图片"><a class="markdownIt-Anchor" href="#文章内插入图片"></a> 文章内插入图片</h2>
-<ul>
-<li>
-<p>用 cmd 控制台打开博客根目录 <code>\BLOG</code> ，输入 <code>npm install hexo-asset-image –save</code> 命令，安装一个可以上传本地图片的插件。</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: new</span><br><span class="line">date: 2019-07-24 13:44:30</span><br><span class="line">tags:</span><br><span class="line">toc: ture</span><br><span class="line">---</span><br></pre></td></tr></table></figure></code></pre><h2 id="文章内插入图片"><a href="#文章内插入图片" class="headerlink" title="文章内插入图片"></a>文章内插入图片</h2><ul>
+<li><p>用 cmd 控制台打开博客根目录 <code>\BLOG</code> ，输入 <code>npm install hexo-asset-image –save</code> 命令，安装一个可以上传本地图片的插件。</p>
 </li>
-<li>
-<p>用编辑器打开 <code>BLOG\_config.yml</code> 配置文件，修改 <code>post_asset_folder: true</code> 。<br>
-这时每次用 <code>hexo new filename</code> 新建文章时，就会出现一个同名文件夹 <code>filename</code> ，把需要插入的图片 <code>1.jpg</code> 放进去。</p>
+<li><p>用编辑器打开 <code>BLOG\_config.yml</code> 配置文件，修改 <code>post_asset_folder: true</code> 。<br>这时每次用 <code>hexo new filename</code> 新建文章时，就会出现一个同名文件夹 <code>filename</code> ，把需要插入的图片 <code>1.jpg</code> 放进去。</p>
 </li>
-<li>
-<p>最后在用 markdown 写文章时，用</p>
+<li><p>最后在用 markdown 写文章时，用 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](filename/1.jpg)</span><br></pre></td></tr></table></figure>
+
 <p>插入图片就好。</p>
 </li>
 </ul>
-<h2 id="文章显示摘要和插入标签"><a class="markdownIt-Anchor" href="#文章显示摘要和插入标签"></a> 文章显示摘要和插入标签</h2>
-<ul>
-<li>
-<p>在文章需要截断部分写入</p>
+<h2 id="文章显示摘要和插入标签"><a href="#文章显示摘要和插入标签" class="headerlink" title="文章显示摘要和插入标签"></a>文章显示摘要和插入标签</h2><ul>
+<li><p>在文章需要截断部分写入 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
-<p>就会自动渲染出文章摘要。</p>
+
+<p>就会自动渲染出文章摘要。 </p>
 </li>
-<li>
-<p>在新建的文章开头部分写入</p>
+<li><p>在新建的文章开头部分写入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 学习使用 GIT</span><br><span class="line">date: 2019-07-23 12:44:13</span><br><span class="line">tags:</span><br><span class="line">- git </span><br><span class="line">- xxx （这就是标签）</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>就能插入多标签。</p>
+
+<p> 就能插入多标签。</p>
 </li>
 </ul>
 <hr>
-<p><strong>后记</strong><br>
-还有更多个性化配置可以参考网上或者自己探索，基本上以上这些配置就能满足我的需求了，或许以后还需要学 <strong>更改代码样式</strong> 、<strong>插入音乐</strong> 和 <strong>插入数学公式</strong>，但目前还不用。<br>
-更改代码样式其实是花了很多时间去弄，但是还没弄懂。其实如果了解得更深，了解 <a href="https://hexo.io/zh-cn/docs/data-files" target="_blank" rel="noopener">Hexo 的构建</a>，了解<a href="https://github.com/litten/hexo-theme-yilia/wiki/Yilia%E6%BA%90%E7%A0%81%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E5%8F%8A%E6%9E%84%E5%BB%BA%E9%A1%BB%E7%9F%A5" target="_blank" rel="noopener"> yilia 的构建</a>，和 前端 等等的相关知识，搭建的博客可以更好，各种样式都能自己设置，尝试修改代码样式时就试用了下 F12控制台 和 css 的相关内容，但是还是没搞懂。目前还是了解一下，点到为止了。</p>
-<p><strong>参考和鸣谢</strong><br>
-<a href="https://blog.csdn.net/dta0502/article/details/84403929" target="_blank" rel="noopener">头像</a> <a href="https://blog.csdn.net/pyfysf/article/details/79156038" target="_blank" rel="noopener">摘要</a> <a href="http://www.caozhengbo.xyz/2018/10/13/Hexo%E5%8D%9A%E5%AE%A2Yilia%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E8%AE%B0%E5%BD%95/" target="_blank" rel="noopener">顶部加载条</a> <a href="https://blog.csdn.net/lynnbest/article/details/79845944" target="_blank" rel="noopener">目录</a> <a href="https://blog.csdn.net/weixin_40688217/article/details/90110975" target="_blank" rel="noopener">插入图片</a> <a href="https://blog.csdn.net/weixin_42215897/article/details/88938417" target="_blank" rel="noopener">插入图片</a> <a href="https://www.cnblogs.com/wangyuehan/p/10033203.html" target="_blank" rel="noopener">网页图标</a> <a href="http://www.janszeng.top/2017/08/30/hexo_yilia_count/#0x02-%E4%B8%8D%E8%92%9C%E5%AD%90%E9%85%8D%E7%BD%AE" target="_blank" rel="noopener">访问量</a> <a href="https://www.jianshu.com/p/adb7640c97c2" target="_blank" rel="noopener">代码行号显示错乱</a><br>
-<strong>待看</strong><br>
-<a href="http://wangwlj.com/2017/09/21/markdown_mathjax/" target="_blank" rel="noopener">数学公式</a> <a href="https://segmentfault.com/q/1010000003987383" target="_blank" rel="noopener">其他渲染引擎</a> <a href="https://www.jianshu.com/p/4b9ee8fec3a3" target="_blank" rel="noopener">主题自定义</a> <a href="https://www.jianshu.com/p/732240700424" target="_blank" rel="noopener">Hexo构建</a></p>
+<p><strong>后记</strong><br>还有更多个性化配置可以参考网上或者自己探索，基本上以上这些配置就能满足我的需求了，或许以后还需要学 <strong>更改代码样式</strong> 、<strong>插入音乐</strong> 和 <strong>插入数学公式</strong>，但目前还不用。<br>更改代码样式其实是花了很多时间去弄，但是还没弄懂。其实如果了解得更深，了解 <a href="https://hexo.io/zh-cn/docs/data-files" target="_blank" rel="noopener">Hexo 的构建</a>，了解<a href="https://github.com/litten/hexo-theme-yilia/wiki/Yilia%E6%BA%90%E7%A0%81%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E5%8F%8A%E6%9E%84%E5%BB%BA%E9%A1%BB%E7%9F%A5" target="_blank" rel="noopener"> yilia 的构建</a>，和 前端 等等的相关知识，搭建的博客可以更好，各种样式都能自己设置，尝试修改代码样式时就试用了下 F12控制台 和 css 的相关内容，但是还是没搞懂。目前还是了解一下，点到为止了。</p>
+<p><strong>参考和鸣谢</strong><br><a href="https://blog.csdn.net/dta0502/article/details/84403929" target="_blank" rel="noopener">头像</a> <a href="https://blog.csdn.net/pyfysf/article/details/79156038" target="_blank" rel="noopener">摘要</a> <a href="http://www.caozhengbo.xyz/2018/10/13/Hexo%E5%8D%9A%E5%AE%A2Yilia%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E8%AE%B0%E5%BD%95/" target="_blank" rel="noopener">顶部加载条</a> <a href="https://blog.csdn.net/lynnbest/article/details/79845944" target="_blank" rel="noopener">目录</a> <a href="https://blog.csdn.net/weixin_40688217/article/details/90110975" target="_blank" rel="noopener">插入图片</a> <a href="https://blog.csdn.net/weixin_42215897/article/details/88938417" target="_blank" rel="noopener">插入图片</a> <a href="https://www.cnblogs.com/wangyuehan/p/10033203.html" target="_blank" rel="noopener">网页图标</a> <a href="http://www.janszeng.top/2017/08/30/hexo_yilia_count/#0x02-%E4%B8%8D%E8%92%9C%E5%AD%90%E9%85%8D%E7%BD%AE" target="_blank" rel="noopener">访问量</a> <a href="https://www.jianshu.com/p/adb7640c97c2" target="_blank" rel="noopener">代码行号显示错乱</a><br><strong>待看</strong><br><a href="http://wangwlj.com/2017/09/21/markdown_mathjax/" target="_blank" rel="noopener">数学公式</a> <a href="https://segmentfault.com/q/1010000003987383" target="_blank" rel="noopener">其他渲染引擎</a> <a href="https://www.jianshu.com/p/4b9ee8fec3a3" target="_blank" rel="noopener">主题自定义</a> <a href="https://www.jianshu.com/p/732240700424" target="_blank" rel="noopener">Hexo构建</a></p>
 
       
 
@@ -400,7 +379,7 @@ PS：这里有个小插曲，我想把自己扫一扫添加我微信的截图放
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本信息的修改"><span class="toc-number">1.</span> <span class="toc-text"> 基本信息的修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#头像图标的修改"><span class="toc-number">2.</span> <span class="toc-text"> 头像图标的修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加所有文章处的缺失模块"><span class="toc-number">3.</span> <span class="toc-text"> 添加所有文章处的缺失模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完善代码行号显示错乱"><span class="toc-number">4.</span> <span class="toc-text"> 完善代码行号显示错乱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加访问量统计"><span class="toc-number">5.</span> <span class="toc-text"> 添加访问量统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加顶部加载条"><span class="toc-number">6.</span> <span class="toc-text"> 添加顶部加载条</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章显示目录"><span class="toc-number">7.</span> <span class="toc-text"> 文章显示目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章内插入图片"><span class="toc-number">8.</span> <span class="toc-text"> 文章内插入图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章显示摘要和插入标签"><span class="toc-number">9.</span> <span class="toc-text"> 文章显示摘要和插入标签</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本信息的修改"><span class="toc-number">1.</span> <span class="toc-text">基本信息的修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#头像图标的修改"><span class="toc-number">2.</span> <span class="toc-text">头像图标的修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加所有文章处的缺失模块"><span class="toc-number">3.</span> <span class="toc-text">添加所有文章处的缺失模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完善代码行号显示错乱"><span class="toc-number">4.</span> <span class="toc-text">完善代码行号显示错乱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加访问量统计"><span class="toc-number">5.</span> <span class="toc-text">添加访问量统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加顶部加载条"><span class="toc-number">6.</span> <span class="toc-text">添加顶部加载条</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章显示目录"><span class="toc-number">7.</span> <span class="toc-text">文章显示目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章内插入图片"><span class="toc-number">8.</span> <span class="toc-text">文章内插入图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章显示摘要和插入标签"><span class="toc-number">9.</span> <span class="toc-text">文章显示摘要和插入标签</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -528,15 +507,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
             <div class="clearfix"></div>
